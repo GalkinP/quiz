@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const InputName = require(`${__dirname}/InputName`);
 const AllTheme = require(`${__dirname}/Model.js`);
+var pokemonMe = require('pokemon-me')
 
 
 
@@ -21,6 +22,8 @@ class Game {
     let value = await user.inputName();
     this.name = value.username;
     console.log(`Приветствую ${this.name}`);
+    console.log(pokemonMe());
+
   }
   finish() {
     console.log(

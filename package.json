@@ -12,6 +12,7 @@
   "dependencies": {
     "cows": "^2.1.1",
     "inquirer": "^8.0.0",
+    "pokemon-me": "^1.0.2",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
