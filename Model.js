@@ -1,5 +1,6 @@
 const fs = require("fs").promises;
 const inquirer = require("inquirer");
+var pokemonMe = require('pokemon-me')
 
 class AllTheme {
   constructor(questions = [], answers = []) {
@@ -19,7 +20,7 @@ class AllTheme {
       name:` question${i}`,
       message: el,
       answer: this.answers[i],
-      
+      img: theme==="pokemon"?pokemonMe():" "
     }));
   }
 
