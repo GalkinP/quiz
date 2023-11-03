@@ -1,6 +1,10 @@
 const inquirer = require("inquirer");
 const InputName = require(`${__dirname}/InputName`);
 const AllTheme = require(`${__dirname}/Model.js`);
+
+
+
+
 let scoresEnd = ["очко", "очка", "очков"];
 function sklonenie(number, txt) {
   const cases = [2, 0, 1, 1, 1, 2];
@@ -35,7 +39,7 @@ async function ask() {
     for (const key in answer) {
       arr.push(answer[key]);
     }
-    //console.log(arr);
+    // console.log(arr);
     answers.forEach((el, i) => {
       if (el === arr[i]) {
         newGame.score++;
