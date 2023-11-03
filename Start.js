@@ -9,8 +9,8 @@ async startNAme(){
 }
 
 }
-// const ff = new Start
-// ff.startNAme()
+const ff = new Start
+ff.startNAme()
 
 
 module.exports = Start; 
