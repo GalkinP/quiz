@@ -40,8 +40,8 @@ class AllTheme {
           message: "Выбери тему",
           choices: [
             { name: "Покемоны", value: "pokemon" },
-            { name: "Выдры", value: "otter" },
-            { name: "Еноты", value: "raccoon" },
+            { name: "Музыка", value: "music" },
+            { name: "География", value: "geograph" },
           ],
         },
       ])
