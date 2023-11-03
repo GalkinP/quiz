@@ -14,3 +14,13 @@ async startNAme(){
 
 
 module.exports = Start; 
+
+
+
+
+// class InputName {
+//   async inputName() {
+//     return await inquirer.prompt([{ name: "username", message: "Введи имя:" }]);
+//   }
+// }
+// module.exports = InputName;
