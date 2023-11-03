@@ -7,12 +7,11 @@ class Voprosik{
   constructor(){
   }
 async getVopros() {
-  const chitka=(await fs.readFile(`${__dirname}/voprosiki.txt`, "utf-8")).split(EOL)
-
+  const chitka=(await fs.readFile(`${__dirname}/voprosiki.txt`, "utf-8")).split('\r\n\r\n')
   const newChit=chitka.map(el=>el.split(EOL))
-  console.log(newChit);
+  const objects =newChit.map(el =>{ const[message, name] = el; return {message,name, type: "input"}});
+ return objects;
 }
 }
-const vopr=new Voprosik
-vopr.getVopros()
+
 module.exports=Voprosik
