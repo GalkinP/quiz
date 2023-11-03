@@ -8,22 +8,23 @@ class AllTheme {
   }
 
   async getTheme() {
-    const topics = (await fs.readdir(${__dirname}/topics, "utf-8")).map((el) => el.split("_")[0]);
+    const topics = (await fs.readdir(`${__dirname}/topics`, "utf-8")).map((el) => el.split("_")[0]);
     return topics;
   }
   async getQuestion(theme) {
-    const data = await fs.readFile(${__dirname}/topics/${theme}_flashcard_data.txt, "utf-8");
+    const data = await fs.readFile(`${__dirname}/topics/${theme}_flashcard_data.txt`, "utf-8");
     this.questions = data.split("\n").filter((el, i) => i % 2 === 0);
     this.answers = data.split("\n").filter((el, i) => i % 2 === 1);
     return this.questions.map((el, i) => ({
-      name: question${i},
+      name:` question${i}`,
       message: el,
       answer: this.answers[i],
+      
     }));
   }
 
   async getAnswers(theme) {
-    const data = await fs.readFile(${__dirname}/topics/${theme}_flashcard_data.txt, "utf-8");
+    const data = await fs.readFile(`${__dirname}/topics/${theme}_flashcard_data.txt`, "utf-8");
     this.answers = data.split("\n").filter((el, i) => i % 2 === 1);
     return this.answers;
   }
@@ -37,7 +38,7 @@ class AllTheme {
           value: "put",
           message: "Выбери тему",
           choices: [
-            { name: "Ястребы", value: "nighthawk" },
+            { name: "Покемоны", value: "pokemon" },
             { name: "Выдры", value: "otter" },
             { name: "Еноты", value: "raccoon" },
           ],
